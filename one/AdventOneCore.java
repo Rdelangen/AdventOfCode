@@ -40,4 +40,12 @@ public class AdventOneCore {
 		return integerList;
 	}
 	
+	public int sumTopEntries(ArrayList<Integer> list, int nrOfEntries) {
+		int result = 0;
+		for(int i=0;i<nrOfEntries;i++) {
+			result += list.get(i).intValue();
+		}
+		return result;
+	}
+	
 }
