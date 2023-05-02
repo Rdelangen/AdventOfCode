@@ -11,7 +11,7 @@ public class AdventTwo {
 		AdventTwoCore core = new AdventTwoCore();
 		ArrayList<String[]> list = core.readFile(filename);
 		
-		int sum = core.calculateScore(list);
+		int sum = core.calculateScoreV2(list);
 		System.out.println(sum);
 
 	}

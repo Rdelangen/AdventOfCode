@@ -30,5 +30,11 @@ class AdventTwoCoreTest {
 		assertNotNull(act);
 		assertFalse(act.isEmpty());
 	}
+	
+	@Test
+	void testCalculateScoreV2() throws IOException {
+		ArrayList<String[]> list = cut.readFile(filename);
+		assertEquals(12, cut.calculateScoreV2(list));
+	}
 
 }
