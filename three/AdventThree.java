@@ -9,7 +9,7 @@ public class AdventThree {
 		String filename = "C:\\Users\\ronald.delangen\\eclipse-workspace\\JAVA_Tutorial\\src\\adventOfCode\\AdventOfCode\\three\\PRD.txt";
 		
 		AdventThreeCore core = new AdventThreeCore();
-		ArrayList<String[]> list = core.readFile(filename);
+		ArrayList<String[]> list = core.readFileV2(filename);
 		int sum = core.calculateScore(list);
 		System.out.println(sum);
 

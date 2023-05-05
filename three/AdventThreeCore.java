@@ -17,10 +17,13 @@ public class AdventThreeCore {
 		for(char c: lists[0].toCharArray()){
 			s1.add(c);
 		}
-		for(char c: lists[1].toCharArray()){
-			s2.add(c);
+		for (String list:lists) {
+			for(char c: list.toCharArray()){
+				s2.add(c);
+			}
+			s1.retainAll(s2);
+			s2.clear();
 		}
-		s1.retainAll(s2);
 		return s1;
 	}
 	
@@ -51,6 +54,33 @@ public class AdventThreeCore {
 				int halfLength = c.length() / 2;
 				String[] s = {c.substring(0, halfLength),c.substring(halfLength)};
 				result.add(s);
+			}
+		} finally {
+			if (reader != null){reader.close();}
+		}
+		
+		return result;
+	}
+	
+	public ArrayList<String[]> readFileV2(String filename) throws IOException{
+		ArrayList<String[]> result = new ArrayList<String[]>();
+		
+		BufferedReader reader = null;
+		try {
+			String c;
+			int counter = 0;
+			String[] lines = new String[3];
+			reader = new BufferedReader(new FileReader(filename));		
+			while(true) {
+				c = reader.readLine();
+				if(c==null) {break;};
+				lines[counter] = c;
+				counter++;
+				if (counter==3) {
+					result.add(lines);
+					counter = 0;
+					lines = new String[3];
+				}
 			}
 		} finally {
 			if (reader != null){reader.close();}

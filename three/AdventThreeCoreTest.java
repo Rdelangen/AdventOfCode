@@ -23,6 +23,13 @@ class AdventThreeCoreTest {
 		int act = core.calculateScore(rucksack);
 		assertEquals(157, act);
 	}
+	
+	@Test
+	void testCalculateScoreV2() throws IOException{
+		ArrayList<String[]> rucksack = core.readFileV2(filename);
+		int act = core.calculateScore(rucksack);
+		assertEquals(70, act);
+	}
 
 	@Test
 	void test() throws IOException {
