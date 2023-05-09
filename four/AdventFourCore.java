@@ -11,7 +11,7 @@ public class AdventFourCore {
 		return (int) list.stream().map(this::convert).filter(this::filter).count();
 	}
 	
-	public int[] convert(String[] s) {
+	protected int[] convert(String[] s) {
 		int[] ranges = new int[s.length];
 		for(int i=0;i<s.length;i++) {
 			ranges[i] = Integer.parseInt(s[i]);
@@ -19,7 +19,7 @@ public class AdventFourCore {
 		return ranges;
 	}
 	
-	public boolean filter(int i[]) {
+	protected boolean filter(int i[]) {
 		return i[0]<=i[2] && i[1]>=i[3]
 			|| i[0]>=i[2] && i[1]<=i[3];
 	}
