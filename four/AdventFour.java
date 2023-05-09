@@ -10,7 +10,7 @@ public class AdventFour {
 	public static void main(String[] args) throws IOException {
 		String filename = PackageConstants.pathRoot + "\\four\\PRD.txt";
 		
-		AdventFourCore core = new AdventFourCore();
+		AdventFourCore core = new AdventFourCoreV2();
 		ArrayList<String[]> list = core.readFile(filename);
 		int sum = core.calculateScore(list);
 		System.out.println(sum);
