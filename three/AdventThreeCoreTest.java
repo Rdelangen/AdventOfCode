@@ -8,10 +8,12 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import adventOfCode.AdventOfCode.generic.PackageConstants;
+
 class AdventThreeCoreTest {
 	
 	private AdventThreeCore core = new AdventThreeCore();
-	private final String filename = "C:\\Users\\ronald.delangen\\eclipse-workspace\\JAVA_Tutorial\\src\\adventOfCode\\AdventOfCode\\three\\Test.txt";
+	private final String filename = PackageConstants.pathRoot + "\\three\\Test.txt";
 
 	@BeforeEach
 	void setUp() throws Exception {
