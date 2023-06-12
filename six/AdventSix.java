@@ -2,7 +2,6 @@ package adventOfCode.AdventOfCode.six;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import adventOfCode.AdventOfCode.generic.PackageConstants;
 
 public class AdventSix {
@@ -17,5 +16,4 @@ public class AdventSix {
 			System.out.println(sum);
 		}
 	}
-
 }
