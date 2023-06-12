@@ -3,7 +3,6 @@ package adventOfCode.AdventOfCode.generic;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class LocalFileReader {
 	
@@ -13,7 +12,7 @@ public class LocalFileReader {
 		this.modify = modify;
 	}
 	
-	public ArrayList<String[]> returnStrings(String filename) throws IOException{
+	public ModifyFileContents returnStrings(String filename) throws IOException{
 		
 		BufferedReader reader = null;
 		try {
@@ -28,7 +27,7 @@ public class LocalFileReader {
 			if (reader != null){reader.close();}
 		}
 		
-		return modify.getResult();
+		return modify;
 	}
 
 }

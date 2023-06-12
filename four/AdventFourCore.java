@@ -27,7 +27,8 @@ public class AdventFourCore {
 	
 	public ArrayList<String[]> readFile(String filename) throws IOException{
 		LocalFileReader fileReader = new LocalFileReader(new FileModifier());
-		return fileReader.returnStrings(filename);
+		FileModifier modifiedFile = (FileModifier) fileReader.returnStrings(filename);
+		return modifiedFile.getResult();
 	}
 	
 	private class FileModifier implements ModifyFileContents{
@@ -39,7 +40,6 @@ public class AdventFourCore {
 			result.add(s.split("[,-]"));
 		}
 
-		@Override
 		public ArrayList<String[]> getResult() {
 			return result;
 		}
