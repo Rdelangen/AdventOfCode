@@ -2,10 +2,34 @@ package adventOfCode.AdventOfCode.eight;
 
 public class Point{
 	private int x,y;
+	private int north,east,south, west;
 	
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
+	}
+	
+	public void setDirection(int visibilty, Direction direction) {
+		switch (direction){
+		case NORTH:
+			north = visibilty;
+			break;
+		case EAST:
+			east = visibilty;
+			break;
+		case SOUTH:
+			south = visibilty;
+			break;
+		case WEST:
+			west = visibilty;
+			break;
+		default:
+			break;
+		}
+	}
+	
+	public int getScenicScore() {
+		return north*east*south*west;
 	}
 	
 	@Override

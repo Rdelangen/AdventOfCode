@@ -10,7 +10,7 @@ public class AdventEight {
 	public static void main(String[] args) throws IOException {
 		String filename = PackageConstants.pathRoot + "\\eight\\PRD.txt";
 		
-		AdventEightCore core = new AdventEightCore();
+		AdventEightCore2 core = new AdventEightCore2();
 		ArrayList<ArrayList<Integer>> list = core.readFile(filename);
 		int score = core.calculateScore(list);
 		System.out.println(score);
