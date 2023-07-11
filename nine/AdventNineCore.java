@@ -24,9 +24,8 @@ public class AdventNineCore {
 			int magnitude = instruction.getMagnitude();
 			while (magnitude > 0) {
 				magnitude--;
-				int[] tail = {0,0}, head = {0,0}, oldHead = {0,0};
+				int[] tail = {0,0}, head = {0,0};
 				head = positions.get(0);
-				oldHead = head.clone();
 				switch (instruction.getDirection()) {
 				case UP:
 					head[1]++;

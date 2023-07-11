@@ -1,7 +1,6 @@
 package adventOfCode.AdventOfCode.seven;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import adventOfCode.AdventOfCode.generic.LocalFileReader;
 import adventOfCode.AdventOfCode.generic.ModifyFileContents;
