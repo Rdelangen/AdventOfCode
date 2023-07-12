@@ -22,14 +22,14 @@ class AdventElevenCoreTest {
 
 	@Test
 	void testCalculateScore() throws IOException {
-		ArrayList<Integer> instructions = core.readFile(filename);
-		int act = core.calculateScore();
-		assertEquals(13140, act);
+		ArrayList<Monkey> instructions = core.readFile(filename);
+		int act = core.calculateScore(instructions);
+		assertEquals(10605, act);
 	}
 
 	@Test
 	void testReadFile() throws IOException {
-		ArrayList<Integer> instructions = core.readFile(filename);
+		ArrayList<Monkey> instructions = core.readFile(filename);
 		assertNotNull(instructions);
 	}
 

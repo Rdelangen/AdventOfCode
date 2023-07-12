@@ -8,12 +8,12 @@ import adventOfCode.AdventOfCode.generic.PackageConstants;
 public class AdventEleven {
 
 	public static void main(String[] args) throws IOException {
-String filename = PackageConstants.pathRoot + "\\PRD\\PRD.txt";
+		String filename = PackageConstants.pathRoot + "\\eleven\\PRD.txt";
 		
 		AdventElevenCore core = new AdventElevenCore();
-		ArrayList<Integer> instructions = core.readFile(filename);
-		int sum = core.calculateScore();
-		System.out.println(sum);
+		ArrayList<Monkey> instructions = core.readFile(filename);
+		int sum = core.calculateScore(instructions);
+//		System.out.println(sum);
 	}
 
 }
