@@ -2,6 +2,8 @@ package adventOfCode.AdventOfCode.thirteen;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import adventOfCode.AdventOfCode.generic.LocalFileReader;
 import adventOfCode.AdventOfCode.generic.ModifyFileContents;
 
@@ -11,11 +13,14 @@ public class AdventThirteenCore {
 	
 	public int calculateScore(ArrayList<AList> list) {
 		int score = 0;
-		for(int i=0;i<list.size();i+=2) {
+		Collections.sort(list,(a,b) -> a.compareTo(b));
+		for(int i=1;i<=list.size();i++) {
+			
+			System.out.println("Iteration: " + i + "\t" + list.get(i-1));
 //			printLists(score, i, list.get(i), list.get(i+1));
-			if (list.get(i).compareTo(list.get(i+1)) < 0) {
-				score += (i+2)/2;
-			}
+//			if (list.get(i).compareTo(list.get(i+1)) < 0) {
+//				score += (i+2)/2;
+//			}
 		}
 		return score;
 	}
